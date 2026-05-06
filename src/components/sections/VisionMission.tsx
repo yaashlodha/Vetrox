@@ -22,7 +22,7 @@ export default function VisionMission() {
               </div>
               <h3 className="text-xl md:text-2xl font-heading font-bold mb-4 text-primary">Vision</h3>
               <p className="text-lg md:text-xl text-foreground/70 italic leading-relaxed">
-                "To eliminate glass waste globally through technical innovation"
+                "Bridging the purity gap, Powering the global circular economy"
               </p>
             </CardContent>
           </Card>
@@ -44,7 +44,7 @@ export default function VisionMission() {
               </div>
               <h3 className="text-xl md:text-2xl font-heading font-bold mb-4">Mission (by Engineers)</h3>
               <p className="text-base md:text-lg text-white/80 leading-relaxed">
-                To optimize the lifecycle of glass using precision engineering, crushing, and purification delivering furnace-ready resources to the world's manufacturers.
+                Mastering the art of glass recovery: We bridge the industry gap by transforming raw waste into 100% pure, market ready resources through rigourous segregation and flawless excecution.
               </p>
             </CardContent>
           </Card>
