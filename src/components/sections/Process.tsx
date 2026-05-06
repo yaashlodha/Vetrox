@@ -15,52 +15,52 @@ import {
 } from "lucide-react";
 
 const steps = [
-  { 
-    title: "Virgin Raw Material", 
+  {
+    title: "Virgin Raw Material",
     description: "Sourcing essential raw materials: Limestone, Soda ash, and Silica sand.",
-    icon: GlassWater, 
+    icon: GlassWater,
     color: "#064e3b" // emerald-950
   },
-  { 
-    title: "Preprocessing", 
+  {
+    title: "Preprocessing",
     description: "Mixing raw materials with iron oxides and heating for initial preparation.",
-    icon: Settings, 
+    icon: Settings,
     color: "#065f46" // emerald-900
   },
-  { 
-    title: "Moulding", 
+  {
+    title: "Moulding",
     description: "Air moulding the glass to achieve desired shapes and structures.",
-    icon: Flame, 
+    icon: Flame,
     color: "#047857" // emerald-700
   },
-  { 
-    title: "Packaging and Finished Product", 
+  {
+    title: "Packaging and Finished Product",
     description: "Final quality check and packaging of new glass products.",
-    icon: Package, 
+    icon: Package,
     color: "#059669" // emerald-600
   },
-  { 
-    title: "Sourcing and Procuring", 
+  {
+    title: "Sourcing and Procuring",
     description: "Reverse logistics of used and disposed glass back to our hubs.",
-    icon: Truck, 
+    icon: Truck,
     color: "#10b981" // emerald-500
   },
-  { 
-    title: "Data Collection & Segregation", 
+  {
+    title: "Data Collection & Segregation",
     description: "Segregating glass by color, brand, and quantity with digital tracking.",
-    icon: Database, 
+    icon: Database,
     color: "#34d399" // emerald-400
   },
-  { 
-    title: "Preprocessing", 
+  {
+    title: "Preprocessing",
     description: "Removal of stickers, labels, and other contaminants from procured bottles.",
-    icon: RefreshCw, 
+    icon: RefreshCw,
     color: "#059669" // emerald-600
   },
-  { 
-    title: "Crushing", 
+  {
+    title: "Crushing",
     description: "Mechanical reduction of glass into uniform cullet batches.",
-    icon: Hammer, 
+    icon: Hammer,
     color: "#064e3b" // emerald-950
   },
 ];
@@ -87,7 +87,7 @@ const getVerticalInfinityPoint = (t: number, scale: number) => {
 // Sample many points along curve
 const sampleCurve = (samples: number, scale: number) => {
   const points = [];
-  const startT =0.5 * Math.PI; // Start at the center crossover (top entry)
+  const startT = 0.5 * Math.PI; // Start at the center crossover (top entry)
   for (let i = 0; i <= samples; i++) {
     const t = startT + (i / samples) * 2 * Math.PI; // Increase t to move toward Lower Left first
     points.push(getInfinityPoint(t, scale));
@@ -113,7 +113,7 @@ export default function Process() {
 
   const desktopScale = 320;
   const mobileScale = 140; // Smaller scale for horizontal mobile loop
-  
+
   const nodeTValues = [
     1.35 * Math.PI, // Step 1 (Top Left)
     1.15 * Math.PI, // Step 2
@@ -136,7 +136,7 @@ export default function Process() {
     <section id="process" className="py-16 md:py-24 bg-[#f8fdfc] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12 md:mb-16">
-          <motion.h2 
+          <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
@@ -144,14 +144,14 @@ export default function Process() {
           >
             The Infinite Cycle
           </motion.h2>
-          <motion.p 
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
             className="text-sm md:text-lg text-gray-600 max-w-2xl mx-auto"
           >
-            Our proprietary 8-step process ensures that every piece of glass we collect 
+            Our proprietary 8-step process ensures that every piece of glass we collect
             is transformed back into a valuable resource.
           </motion.p>
         </div>
@@ -168,7 +168,7 @@ export default function Process() {
                   exit={{ opacity: 0, y: -10, scale: 0.95 }}
                   className="bg-white/98 backdrop-blur-md p-4 md:p-6 rounded-2xl shadow-2xl border border-teal-100 w-full max-w-[320px] md:max-w-xs text-center"
                 >
-                  <div 
+                  <div
                     className="w-10 h-10 md:w-12 md:h-12 rounded-xl mx-auto mb-2 md:mb-3 flex items-center justify-center text-white shadow-md"
                     style={{ backgroundColor: steps[hoveredIndex].color }}
                   >
@@ -273,7 +273,7 @@ export default function Process() {
                 <BottleWine size={120} className="md:w-[240px] md:h-[240px]" strokeWidth={1} />
               </div>
             </div>
-            
+
 
 
             {/* Nodes */}
@@ -300,7 +300,7 @@ export default function Process() {
                     initial={{ scale: 0 }}
                     whileInView={{ scale: 1 }}
                     viewport={{ once: true }}
-                    transition={{ 
+                    transition={{
                       delay: i * 0.1,
                       scale: { type: "spring", stiffness: 260, damping: 20 }
                     }}
@@ -317,25 +317,25 @@ export default function Process() {
                     )}
 
                     <motion.div
-                      animate={{ 
+                      animate={{
                         scale: isActive ? 1.15 : 1,
                         boxShadow: isActive ? "0 10px 20px rgba(0,0,0,0.2)" : "0 5px 10px rgba(0,0,0,0.1)"
                       }}
                       className="w-10 h-10 md:w-16 md:h-16 rounded-full flex items-center justify-center border-[3px] md:border-4 border-white transition-colors duration-300"
                       style={{ backgroundColor: step.color }}
                     >
-                      <StepIcon 
-                        size={isMobile ? 18 : 24} 
-                        className="text-white" 
+                      <StepIcon
+                        size={isMobile ? 18 : 24}
+                        className="text-white"
                       />
                     </motion.div>
 
-                    <motion.div 
-                      animate={{ 
+                    <motion.div
+                      animate={{
                         opacity: isActive ? 0 : 1,
                         y: isActive ? -5 : 0
                       }}
-                      className="absolute bottom-full mb-2 left-1/2 -translate-x-1/2 text-center w-24 md:w-28"
+                      className="hidden md:block absolute bottom-full mb-2 left-1/2 -translate-x-1/2 text-center w-24 md:w-28"
                     >
                       <div className="text-[8px] md:text-[9px] font-bold text-[#1a3a3a] leading-tight">
                         {step.title}
