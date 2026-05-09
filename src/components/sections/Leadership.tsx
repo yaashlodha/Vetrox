@@ -1,10 +1,30 @@
 import { motion } from "motion/react";
 
 const leaders = [
-  { name: "Chaman", title: "CEO", image: "/media/chaman-photo.webp" },
-  { name: "Jainam", title: "CFO", image: "/media/jainam-photo.webp" },
-  { name: "Yaash", title: "CCO", image: "/media/yaash-photo.webp" },
-  { name: "Siddh", title: "COO", image: "/media/siddh-photo.webp" },
+  {
+    name: "Chaman",
+    title: "CEO",
+    image: "/media/chaman-photo.webp",
+    description: "This is a test message to check if the description is visible and how many lines it takes to fill the space without making it look messy or unaligned."
+  },
+  {
+    name: "Jainam",
+    title: "CFO",
+    image: "/media/jainam-photo.webp",
+    description: "This is a test message to check if the description is visible and how many lines it takes to fill the space without making it look messy or unaligned."
+  },
+  {
+    name: "Yaash",
+    title: "CCO",
+    image: "/media/yaash-photo.webp",
+    description: "This is a test message to check if the description is visible and how many lines it takes to fill the space without making it look messy or unaligned."
+  },
+  {
+    name: "Siddh",
+    title: "COO",
+    image: "/media/siddh-photo.webp",
+    description: "This is a test message to check if the description is visible and how many lines it takes to fill the space without making it look messy or unaligned."
+  },
 ];
 
 export default function Leadership() {
@@ -27,17 +47,20 @@ export default function Leadership() {
               className="group"
             >
               <div className="relative aspect-[3/4] rounded-xl md:rounded-2xl overflow-hidden mb-4 md:mb-6 shadow-lg grayscale group-hover:grayscale-0 transition-all duration-500">
-                <img 
-                  src={leader.image} 
-                  alt={leader.name} 
+                <img
+                  src={leader.image}
+                  alt={leader.name}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
               </div>
-              <div className="text-center">
+              <div className="text-center px-2">
                 <h3 className="text-base md:text-xl font-bold text-primary">{leader.name}</h3>
-                <p className="text-foreground/50 uppercase tracking-widest text-[8px] md:text-xs font-medium">{leader.title}</p>
+                <p className="text-foreground/50 uppercase tracking-widest text-[8px] md:text-xs font-medium mb-3">{leader.title}</p>
+                <p className="text-foreground/60 text-[10px] md:text-sm leading-relaxed max-w-[200px] mx-auto">
+                  {leader.description}
+                </p>
               </div>
             </motion.div>
           ))}
