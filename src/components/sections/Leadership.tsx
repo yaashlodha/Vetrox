@@ -5,25 +5,25 @@ const leaders = [
     name: "Chaman",
     title: "CEO",
     image: "/media/chaman-photo.webp",
-    description: "This is a test message to check if the description is visible and how many lines it takes to fill the space without making it look messy or unaligned."
+    description: "The visionary spark of Vetrox, Chaman transformed a singular idea into a mission-driven reality. He views the company as a collaborative journey, built by hand-picking the right minds and merging personal trust with professional excellence."
   },
   {
     name: "Jainam",
     title: "CFO",
     image: "/media/jainam-photo.webp",
-    description: "This is a test message to check if the description is visible and how many lines it takes to fill the space without making it look messy or unaligned."
+    description: 'Jainam brings a deep, analytical perspective to financial stewardship, looking beyond balance sheets to find opportunities for collective growth. Balancing the wisdom of an "old soul" with a "young heart," he views his role through the lens of humility and continuous learning.'
   },
   {
     name: "Yaash",
     title: "CCO",
     image: "/media/yaash-photo.webp",
-    description: "This is a test message to check if the description is visible and how many lines it takes to fill the space without making it look messy or unaligned."
+    description: "A systems thinker at heart, Yaash designs the digital infrastructure and operational processes powering Vetrox. He views company building as an engineering exercise, crafting scalable frameworks to transform traditional glass recycling into a smart, efficient engine."
   },
   {
     name: "Siddh",
     title: "COO",
     image: "/media/siddh-photo.webp",
-    description: "This is a test message to check if the description is visible and how many lines it takes to fill the space without making it look messy or unaligned."
+    description: "Siddh is the operational force ensuring Vetrox’s physical systems are flawless. Bridging the gap between high-level strategy and industrial engineering, he oversees the complex machinery and hardware that form the company’s backbone."
   },
 ];
 
