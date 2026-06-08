@@ -5,25 +5,25 @@ const leaders = [
     name: "Chaman",
     title: "CEO",
     image: "/media/chaman-photo.webp",
-    description: "The visionary spark of Vetrox, Chaman transformed a singular idea into a mission-driven reality. He views the company as a collaborative journey, built by hand-picking the right minds and merging personal trust with professional excellence."
+    description: "An engineer by training, a gold medalist by merit, and a visionary leader by evolution. Our CEO bridges the gap between technical brilliance and strategic foresight. With a sharp instinct for the big picture, he effortlessly transforms ambitious blueprints into reality. Grounded yet forward-thinking, he doesn't just lead the company he sets the gold standard for how we grow."
   },
   {
     name: "Jainam",
     title: "CFO",
     image: "/media/jainam-photo.webp",
-    description: 'Jainam brings a deep, analytical perspective to financial stewardship, looking beyond balance sheets to find opportunities for collective growth. Balancing the wisdom of an "old soul" with a "young heart," he views his role through the lens of humility and continuous learning.'
+    description: "An engineer by training, a financial strategist by evolution. Our CFO brings a rare blend of logic and imagination to the numbers game. He has an uncanny ability to decode complex processes and read the room effortlessly. Endlessly hardworking and genuinely invested in those around him, he isn’t just a CFO he’s the one who actually picks up the phone."
   },
   {
     name: "Yaash",
     title: "CCO",
     image: "/media/yaash-photo.webp",
-    description: "A systems thinker at heart, Yaash designs the digital infrastructure and operational processes powering Vetrox. He views company building as an engineering exercise, crafting scalable frameworks to transform traditional glass recycling into a smart, efficient engine."
+    description: "A student of human behavior by nature, a master storyteller and strategist by evolution also an Engineer by profession. Our CCO applies data-driven logic to the art of human connection. He looks past market trends to understand the human emotions behind them. Exceptionally articulate and intensely creative, he doesn't just drive commercial success he builds lasting bridges between our brand and the world."
   },
   {
     name: "Siddh",
     title: "COO",
     image: "/media/siddh-photo.webp",
-    description: "Siddh is the operational force ensuring Vetrox’s physical systems are flawless. Bridging the gap between high-level strategy and industrial engineering, he oversees the complex machinery and hardware that form the company’s backbone."
+    description: "A master strategist by design, a master of execution by evolution. Our COO translates complex logic into seamless everyday reality. With an uncanny ability to clear operational bottlenecks, he optimizes our business without ever losing sight of the people behind it. Relentlessly efficient and always in the trenches, he ensures every promise we make is a promise delivered."
   },
 ];
 
@@ -58,7 +58,7 @@ export default function Leadership() {
               <div className="text-center px-2">
                 <h3 className="text-base md:text-xl font-bold text-primary">{leader.name}</h3>
                 <p className="text-foreground/50 uppercase tracking-widest text-[8px] md:text-xs font-medium mb-3">{leader.title}</p>
-                <p className="text-foreground/60 text-[10px] md:text-sm leading-relaxed max-w-[200px] mx-auto">
+                <p className="text-left text-foreground/60 text-[10px] md:text-sm leading-relaxed max-w-[200px] mx-auto">
                   {leader.description}
                 </p>
               </div>
