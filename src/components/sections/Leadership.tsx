@@ -58,7 +58,7 @@ export default function Leadership() {
               <div className="text-center px-2">
                 <h3 className="text-base md:text-xl font-bold text-primary">{leader.name}</h3>
                 <p className="text-foreground/50 uppercase tracking-widest text-[8px] md:text-xs font-medium mb-3">{leader.title}</p>
-                <p className="text-left text-foreground/60 text-[10px] md:text-sm leading-relaxed max-w-[200px] mx-auto">
+                <p className="text-centre text-foreground/60 text-[10px] md:text-sm leading-relaxed max-w-[200px] mx-auto">
                   {leader.description}
                 </p>
               </div>
