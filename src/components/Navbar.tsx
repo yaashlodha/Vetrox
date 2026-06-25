@@ -18,8 +18,14 @@ export default function Navbar() {
       animate={{ y: 0 }}
       className="fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-[100] w-[95%] md:w-max max-w-7xl px-4 md:px-6 lg:px-8 py-3 md:py-4 bg-white/90 backdrop-blur-xl rounded-full border border-primary/10 shadow-[0_20px_50px_rgba(0,0,0,0.15)] flex items-center justify-between md:justify-center gap-3 md:gap-6 lg:gap-8"
     >
-      <Link to="/" className="flex items-center gap-2 md:gap-3 shrink-0">
-        <img 
+      <Link to="/" className="flex items-center gap-2 md:gap-3 shrink-0 cursor-pointer"
+      onClick={() => {
+    // If already on homepage, smoothly scroll to top
+    if (window.location.pathname === "/") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  }}>
+      <img 
           src="/media/vetrox-logo.webp" 
           alt="Vetrox Logo" 
           className="w-10 h-10 md:w-12 md:h-12 lg:w-14 lg:h-14 object-contain"
