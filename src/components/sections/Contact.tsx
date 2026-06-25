@@ -19,6 +19,16 @@ export default function Contact() {
     setStatus("submitting");
     setErrorMessage(null);
 
+    // Filter out formatting characters to calculate raw digit count
+    const digitCount = formData.phone.replace(/\D/g, "").length;
+    
+    // Checks if the digit footprint falls within the valid 10-12 range
+    if (digitCount < 10 || digitCount > 12) {
+      setStatus("error");
+      setErrorMessage("Please enter a valid phone number (10-12 digits).");
+      return;
+    }
+
     try {
       const response = await fetch("/api/contact", {
         method: "POST",
@@ -136,7 +146,11 @@ export default function Contact() {
                       id="phone"
                       type="tel"
                       value={formData.phone}
-                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                      // Clean input live: filters out accidental letters/symbols while leaving spacing options open
+                      onChange={(e) => {
+                        const allowedChars = e.target.value.replace(/[^\d\s+\-()]/g, "");
+                        setFormData({ ...formData, phone: allowedChars });
+                      }}
                       className="w-full px-4 py-2.5 rounded-xl border border-gray-200 bg-white focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 outline-none transition-all text-sm"
                       placeholder="Phone Number"
                     />
