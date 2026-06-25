@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { motion } from "motion/react";
+import { motion, AnimatePresence } from "motion/react";
 import { Send, CheckCircle2, AlertCircle } from "lucide-react";
 
 export default function Contact() {
@@ -13,21 +13,59 @@ export default function Contact() {
   });
 
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  
+  // Real-time local field warnings
+  const [phoneWarning, setPhoneWarning] = useState<string | null>(null);
+  const [emailWarning, setEmailWarning] = useState<string | null>(null);
+
+  // Validate phone format cleanly on every keystroke
+  const handlePhoneChange = (value: string) => {
+    const allowedChars = value.replace(/[^\d\s+\-()]/g, "");
+    const digitCount = allowedChars.replace(/\D/g, "").length;
+
+    setFormData((prev) => ({ ...prev, phone: allowedChars }));
+
+    if (digitCount > 0 && digitCount < 10) {
+      setPhoneWarning("Too short (needs 10-12 digits)");
+    } else if (digitCount > 12) {
+      setPhoneWarning("Too long (max 12 digits)");
+    } else {
+      setPhoneWarning(null);
+    }
+  };
+
+  // Validate email format on every keystroke
+  const handleEmailChange = (value: string) => {
+    setFormData((prev) => ({ ...prev, email: value }));
+
+    // Standard RFC 5322 Email Validation Regex
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (value.length > 0 && !emailRegex.test(value)) {
+      setEmailWarning("Invalid email address format");
+    } else {
+      setEmailWarning(null);
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus("submitting");
-    setErrorMessage(null);
-
-    // Filter out formatting characters to calculate raw digit count
-    const digitCount = formData.phone.replace(/\D/g, "").length;
     
-    // Checks if the digit footprint falls within the valid 10-12 range
+    // Final defensive guard checks before firing submission
+    const digitCount = formData.phone.replace(/\D/g, "").length;
     if (digitCount < 10 || digitCount > 12) {
-      setStatus("error");
-      setErrorMessage("Please enter a valid phone number (10-12 digits).");
+      setPhoneWarning("Please enter a valid phone number (10-12 digits).");
       return;
     }
+
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    if (!emailRegex.test(formData.email)) {
+      setEmailWarning("Please enter a valid email address.");
+      return;
+    }
+
+    setStatus("submitting");
+    setErrorMessage(null);
 
     try {
       const response = await fetch("/api/contact", {
@@ -139,33 +177,74 @@ export default function Contact() {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-1.5">
+                  {/* Phone Input Box */}
+                  <div className="space-y-1.5 relative">
                     <label htmlFor="phone" className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Phone</label>
                     <input
                       required
                       id="phone"
                       type="tel"
                       value={formData.phone}
-                      // Clean input live: filters out accidental letters/symbols while leaving spacing options open
-                      onChange={(e) => {
-                        const allowedChars = e.target.value.replace(/[^\d\s+\-()]/g, "");
-                        setFormData({ ...formData, phone: allowedChars });
-                      }}
-                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 bg-white focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 outline-none transition-all text-sm"
+                      onChange={(e) => handlePhoneChange(e.target.value)}
+                      className={`w-full px-4 py-2.5 rounded-xl border bg-white outline-none transition-all text-sm ${
+                        phoneWarning 
+                          ? "border-red-400 focus:border-red-500 focus:ring-4 focus:ring-red-500/10" 
+                          : "border-gray-200 focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10"
+                      }`}
                       placeholder="Phone Number"
                     />
+                    
+                    <AnimatePresence>
+                      {phoneWarning && (
+                        <motion.div
+                          initial={{ opacity: 0, y: -4, scale: 0.95 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: -4, scale: 0.95 }}
+                          // Background updated to #FFF8FA, border added, text color updated to deep red for contrast
+                          className="absolute z-10 top-[calc(100%+4px)] left-0 bg-[#FFF8FA] border border-red-200 text-red-600 text-[11px] px-3 py-1.5 rounded-lg font-medium shadow-md flex items-center gap-1.5 whitespace-nowrap pointer-events-none"
+                        >
+                          <AlertCircle size={12} />
+                          {phoneWarning}
+                          {/* Matching upward bubble indicator */}
+                          <div className="absolute bottom-full left-4 w-2 h-2 bg-[#FFF8FA] border-t border-l border-red-200 rotate-45 -translate-y-[-5px]" />
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
-                  <div className="space-y-1.5">
+
+                  {/* Email Input Box */}
+                  <div className="space-y-1.5 relative">
                     <label htmlFor="email" className="text-[10px] font-bold uppercase tracking-widest text-gray-400">Email</label>
                     <input
                       required
                       id="email"
                       type="email"
                       value={formData.email}
-                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-2.5 rounded-xl border border-gray-200 bg-white focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10 outline-none transition-all text-sm"
+                      onChange={(e) => handleEmailChange(e.target.value)}
+                      className={`w-full px-4 py-2.5 rounded-xl border bg-white outline-none transition-all text-sm ${
+                        emailWarning 
+                          ? "border-red-400 focus:border-red-500 focus:ring-4 focus:ring-red-500/10" 
+                          : "border-gray-200 focus:border-emerald-500 focus:ring-4 focus:ring-emerald-500/10"
+                      }`}
                       placeholder="Email Address"
                     />
+
+                    <AnimatePresence>
+                      {emailWarning && (
+                        <motion.div
+                          initial={{ opacity: 0, y: -4, scale: 0.95 }}
+                          animate={{ opacity: 1, y: 0, scale: 1 }}
+                          exit={{ opacity: 0, y: -4, scale: 0.95 }}
+                          // Background updated to #FFF8FA, border added, text color updated to deep red for contrast
+                          className="absolute z-10 top-[calc(100%+4px)] left-0 bg-[#FFF8FA] border border-red-200 text-red-600 text-[11px] px-3 py-1.5 rounded-lg font-medium shadow-md flex items-center gap-1.5 whitespace-nowrap pointer-events-none"
+                        >
+                          <AlertCircle size={12} />
+                          {emailWarning}
+                          {/* Matching upward bubble indicator */}
+                          <div className="absolute bottom-full left-4 w-2 h-2 bg-[#FFF8FA] border-t border-l border-red-200 rotate-45 -translate-y-[-5px]" />
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
                 </div>
 
@@ -184,9 +263,9 @@ export default function Contact() {
 
                 <button
                   type="submit"
-                  disabled={status === "submitting"}
+                  disabled={status === "submitting" || !!phoneWarning || !!emailWarning}
                   className={`w-full py-3.5 rounded-xl font-bold flex items-center justify-center gap-2 transition-all text-sm ${
-                    status === "submitting" 
+                    status === "submitting" || phoneWarning || emailWarning
                     ? "bg-gray-100 text-gray-400 cursor-not-allowed" 
                     : "bg-primary text-white hover:brightness-110 hover:shadow-lg hover:shadow-primary/20 active:scale-[0.98]"
                   }`}
@@ -201,11 +280,13 @@ export default function Contact() {
                   )}
                 </button>
 
+                {/* Main Submission Error Banner */}
                 {status === "error" && (
                   <motion.div 
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="flex flex-col gap-2 bg-red-50 p-4 rounded-xl text-xs"
+                    // Background color changed from bg-red-50 to bg-[#FFF8FA]
+                    className="flex flex-col gap-2 bg-[#FFF8FA] border border-red-100 p-4 rounded-xl text-xs"
                   >
                     <div className="flex items-center gap-2 text-red-600 font-bold">
                       <AlertCircle size={14} />
