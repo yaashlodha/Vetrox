@@ -5,7 +5,8 @@
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
-import { Analytics } from "@vercel/analytics/next";
+// 1. Change /next to /react
+import { Analytics } from "@vercel/analytics/react"; 
 
 export default function App() {
   return (
@@ -16,7 +17,7 @@ export default function App() {
         </Routes>
       </BrowserRouter>
       
-      {/* Vercel Web Analytics tracker runs globally here */}
+      {/* 2. Place the component here */}
       <Analytics />
     </>
   );
