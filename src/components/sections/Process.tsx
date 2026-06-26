@@ -133,7 +133,7 @@ export default function Process() {
   const mobilePath = generatePath(sampleCurve(200, mobileScale));
 
   return (
-    <section id="process" className="py-16 md:py-24 bg-[#f8fdfc] overflow-hidden">
+    <section id="process" className="pt-16 pb-8 md:pt-24 md:pb-12 bg-[#f8fdfc] overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         <div className="text-center mb-12 md:mb-16">
           <motion.h2

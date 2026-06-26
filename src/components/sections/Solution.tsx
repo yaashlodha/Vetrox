@@ -51,8 +51,8 @@ export default function Solution() {
   }, []);
   
   return (
-    <section id="solution" className="py-20 md:py-32 px-6 bg-secondary/10 overflow-hidden">
-      <div className="max-w-7xl mx-auto">
+    <section id="solution" className="pt-8 pb-20 md:pt-14 md:pb-32 px-6 bg-secondary/10 overflow-hidden">
+        <div className="max-w-7xl mx-auto">
         <div className="max-w-4xl mx-auto">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
