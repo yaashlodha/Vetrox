@@ -36,7 +36,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.5 }}
           className="text-secondary font-sans text-lg sm:text-xl md:text-2xl lg:text-3xl font-light tracking-[0.1em] sm:tracking-[0.2em] uppercase mb-10 md:mb-12 drop-shadow-md text-balance"
         >
-          Made by thousands, used by crores, processed by one
+          <strong><b>Manufactured</b></strong> by thousands, <strong><b>consumed</b></strong> by crores, <strong><b>processed</b></strong> by one
         </motion.p>
 
         <motion.div
