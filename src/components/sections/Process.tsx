@@ -16,7 +16,7 @@ import {
 
 const steps = [
   {
-    title: "Virgin Raw Material",
+    title: <b>Virgin Raw Material</b>,
     description: "Sourcing essential raw materials: Limestone, Soda ash, and Silica sand.",
     icon: GlassWater,
     color: "#064e3b" // emerald-950
@@ -306,15 +306,24 @@ export default function Process() {
                     }}
                     className="relative cursor-pointer"
                   >
-                    {isActive && (
-                      <motion.div
-                        layoutId="ripple"
-                        className="absolute inset-0 rounded-full bg-teal-400/20"
-                        initial={{ scale: 0.8, opacity: 0 }}
-                        animate={{ scale: 1.8, opacity: 1 }}
-                        transition={{ duration: 1.5, repeat: Infinity }}
-                      />
+                    {/* Floating triangle indicator to highlight the 5th step (Sourcing & Procuring) */}
+                    {i === 4 && (
+                      <div className="absolute top-full mt-2 left-1/2 -translate-x-1/2 pointer-events-none z-20">
+                        <div 
+                          className="w-0 h-0 border-l-[7px] border-r-[7px] border-b-[10px] border-l-transparent border-r-transparent animate-bounce"
+                          style={{ borderBottomColor: step.color }}
+                        />
+                      </div>
                     )}
+                    {isActive && (
+  <motion.div
+    layoutId="ripple"
+    className="absolute inset-0 rounded-full bg-teal-400/20"
+    initial={{ scale: 0.8, opacity: 0 }}
+    animate={{ scale: 1.8, opacity: 1 }}
+    transition={{ duration: 1.5, repeat: Infinity }}
+  />
+)}
 
                     <motion.div
                       animate={{
@@ -348,6 +357,17 @@ export default function Process() {
           </div>
         </div>
       </div>
+      <div className="text-center mb-12 md:mb-16">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="text-sm md:text-lg text-gray-600 max-w-2xl mx-auto"
+          >
+            The pointer indicated the start of Vetrox's process.
+          </motion.p>
+        </div>
     </section>
   );
 }

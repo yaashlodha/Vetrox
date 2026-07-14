@@ -2,25 +2,25 @@ import { motion } from "motion/react";
 
 const leaders = [
   {
-    name: "Chaman",
+    name: "Chaman Chordia",
     title: "CEO",
     image: "/media/chaman-photo.webp",
     description: "An engineer by training, a gold medalist by merit, and a visionary leader by evolution. Our CEO bridges the gap between technical brilliance and strategic foresight. With a sharp instinct for the big picture, he effortlessly transforms ambitious blueprints into reality. Grounded yet forward-thinking, he doesn't just lead the company he sets the gold standard for how we grow."
   },
   {
-    name: "Jainam",
+    name: "Jainam Shah",
     title: "CFO",
     image: "/media/jainam-photo.webp",
     description: "An engineer by training, a financial strategist by evolution. Our CFO brings a rare blend of logic and imagination to the numbers game. He has an uncanny ability to decode complex processes and read the room effortlessly. Endlessly hardworking and genuinely invested in those around him, he isn’t just a CFO he’s the one who actually picks up the phone."
   },
   {
-    name: "Yaash",
+    name: "Yaash B",
     title: "CCO",
     image: "/media/yaash-photo.webp",
     description: "A student of human behavior by nature, a master storyteller and strategist by evolution also an Engineer by profession. Our CCO applies data-driven logic to the art of human connection. He looks past market trends to understand the human emotions behind them. Exceptionally articulate and intensely creative, he doesn't just drive commercial success he builds lasting bridges between our brand and the world."
   },
   {
-    name: "Siddh",
+    name: "Siddh Shah",
     title: "COO",
     image: "/media/siddh-photo.webp",
     description: "A master strategist by design, a master of execution by evolution. Our COO translates complex logic into seamless everyday reality. With an uncanny ability to clear operational bottlenecks, he optimizes our business without ever losing sight of the people behind it. Relentlessly efficient and always in the trenches, he ensures every promise we make is a promise delivered."
