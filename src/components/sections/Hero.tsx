@@ -1,6 +1,4 @@
 import { motion } from "motion/react";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
@@ -44,13 +42,11 @@ export default function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <a href="#contact">
-            <Button 
-              size="lg" 
-              className="bg-white text-primary hover:bg-secondary px-8 sm:px-12 py-6 sm:py-8 text-lg sm:text-xl font-bold rounded-full transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,255,255,0.3)] w-full sm:w-auto"
-            >
-              Partner with us.
-            </Button>
+          <a 
+            href="#contact"
+            className="inline-flex items-center justify-center bg-white text-primary hover:bg-secondary px-8 sm:px-12 py-6 sm:py-8 text-lg sm:text-xl font-bold rounded-full transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,255,255,0.3)] w-full sm:w-auto"
+          >
+            Partner with us.
           </a>
         </motion.div>
       </div>

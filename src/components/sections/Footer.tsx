@@ -1,5 +1,4 @@
 import { Mail, MapPin, Globe, Instagram, MessageSquare } from "lucide-react";
-import { Link } from "react-router-dom";
 
 export default function Footer() {
   return (
@@ -9,7 +8,13 @@ export default function Footer() {
           {/* Left: Logo + Motto */}
           <div className="space-y-4 md:space-y-6">
             <div className="flex items-center gap-2">
-              <Link to="/">
+              <a 
+                href="#"
+                onClick={(e) => {
+                  e.preventDefault();
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
                 <img 
                   src="/media/vetro-logo-white.webp" 
                   alt="Vetrox Infinity Logo" 
@@ -19,7 +24,7 @@ export default function Footer() {
                     e.currentTarget.src = "https://picsum.photos/seed/glass/100/100";
                   }}
                 />
-              </Link>
+              </a>
               <span className="font-heading font-bold text-xl md:text-2xl tracking-tighter">VETROX</span>
             </div>
             <p className="text-white/70 italic text-base md:text-lg">

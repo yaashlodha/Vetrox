@@ -10,7 +10,6 @@ import {
   Package,
   Truck,
   Database,
-  Archive,
   BottleWine
 } from "lucide-react";
 
@@ -77,11 +76,6 @@ const getInfinityPoint = (t: number, scale: number) => {
   };
 };
 
-// Lemniscate (∞ curve) - Vertical
-const getVerticalInfinityPoint = (t: number, scale: number) => {
-  const p = getInfinityPoint(t, scale);
-  return { x: p.y, y: p.x };
-};
 
 
 // Sample many points along curve

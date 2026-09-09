@@ -1,5 +1,4 @@
 import { motion } from "motion/react";
-import { Card, CardContent } from "@/components/ui/card";
 import { Target, Lightbulb } from "lucide-react";
 
 export default function VisionMission() {
@@ -12,20 +11,20 @@ export default function VisionMission() {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <Card className="h-full border-none shadow-lg bg-white/80 backdrop-blur-sm overflow-hidden group">
+          <div className="relative h-full rounded-2xl border-none shadow-lg bg-white/80 backdrop-blur-sm overflow-hidden group">
             <div className="absolute top-0 right-0 p-4 md:p-8 opacity-5 group-hover:opacity-10 transition-opacity">
               <Target size={80} className="text-primary md:w-[120px] md:h-[120px]" />
             </div>
-            <CardContent className="p-8 md:p-12 flex flex-col h-full">
+            <div className="p-8 md:p-12 flex flex-col h-full">
               <div className="w-10 h-10 md:w-12 md:h-12 bg-primary/10 rounded-xl flex items-center justify-center mb-6">
-                <Target className="text-primary" size={20} md:size={24} />
+                <Target className="text-primary md:w-6 md:h-6" size={20} />
               </div>
               <h3 className="text-xl md:text-2xl font-heading font-bold mb-4 text-primary">Vision</h3>
               <p className="text-lg md:text-xl text-foreground/70 italic leading-relaxed">
                 "Bridging the purity gap, Powering the global circular economy"
               </p>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </motion.div>
 
         <motion.div
@@ -34,20 +33,20 @@ export default function VisionMission() {
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.2 }}
         >
-          <Card className="h-full border-none shadow-lg bg-primary text-white overflow-hidden group">
+          <div className="relative h-full rounded-2xl border-none shadow-lg bg-primary text-white overflow-hidden group">
             <div className="absolute top-0 right-0 p-4 md:p-8 opacity-10 group-hover:opacity-20 transition-opacity">
               <Lightbulb size={80} className="md:w-[120px] md:h-[120px]" />
             </div>
-            <CardContent className="p-8 md:p-12 flex flex-col h-full">
+            <div className="p-8 md:p-12 flex flex-col h-full">
               <div className="w-10 h-10 md:w-12 md:h-12 bg-white/10 rounded-xl flex items-center justify-center mb-6">
-                <Lightbulb className="text-white" size={20} md:size={24} />
+                <Lightbulb className="text-white md:w-6 md:h-6" size={20} />
               </div>
               <h3 className="text-xl md:text-2xl font-heading font-bold mb-4">Mission (by Engineers)</h3>
               <p className="text-base md:text-lg text-white/80 leading-relaxed">
                 Mastering the art of glass recovery: We bridge the industry gap by transforming raw waste into 100% pure, market ready resources through rigourous segregation and flawless excecution.
               </p>
-            </CardContent>
-          </Card>
+            </div>
+          </div>
         </motion.div>
       </div>
     </section>
