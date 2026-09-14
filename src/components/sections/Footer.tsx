@@ -83,10 +83,6 @@ export default function Footer() {
           <p className="text-white/40 text-[10px] md:text-sm">
             © 2026 Vetrox.co.in. All rights reserved.
           </p>
-          <div className="flex items-center justify-center gap-2 text-white/60 text-[10px] md:text-xs px-4">
-            <div className="w-1.5 h-1.5 md:w-2 md:h-2 bg-secondary rounded-full animate-pulse shrink-0" />
-            <p className="text-balance">This website is hosted on green energy to match our mission.</p>
-          </div>
         </div>
       </div>
     </footer>

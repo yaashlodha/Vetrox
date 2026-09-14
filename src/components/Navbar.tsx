@@ -35,18 +35,33 @@ export default function Navbar() {
         <span className="text-primary font-heading font-black text-base md:text-lg lg:text-xl tracking-tighter leading-none">VETROX</span>
       </a>
       
+      
       <div className="hidden md:block w-px h-6 bg-primary/10" />
 
       <div className="hidden md:flex items-center gap-4 lg:gap-8">
         {navItems.map((item) => (
-          <a 
-            key={item.name} 
-            href={item.href}
-            className="text-primary/70 hover:text-primary text-[10px] lg:text-sm font-bold tracking-widest uppercase transition-all hover:scale-105 whitespace-nowrap"
-          >
-            {item.name}
-          </a>
-        ))}
+  <a 
+    key={item.name} 
+    href={item.href}
+    className="text-primary/70 hover:text-primary text-[10px] lg:text-sm font-bold tracking-widest uppercase transition-all hover:scale-105 whitespace-nowrap"
+    onClick={(e) => {
+  e.preventDefault();
+  const target = document.querySelector(item.href);
+  if (target) {
+    const headerOffset = 100; // Adjust to match your navbar height + spacing
+    const elementPosition = target.getBoundingClientRect().top;
+    const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
+    });
+  }
+}}
+  >
+    {item.name}
+  </a>
+))}
       </div>
 
       <div className="w-px h-4 bg-primary/10 hidden md:block" />

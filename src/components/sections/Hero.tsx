@@ -46,7 +46,7 @@ export default function Hero() {
             href="#contact"
             className="inline-flex items-center justify-center bg-white text-primary hover:bg-secondary px-8 sm:px-12 py-6 sm:py-8 text-lg sm:text-xl font-bold rounded-full transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,255,255,0.3)] w-full sm:w-auto"
           >
-            Partner with us.
+            Partner With Us.
           </a>
         </motion.div>
       </div>
