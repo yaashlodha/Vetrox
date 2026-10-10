@@ -34,7 +34,7 @@ export default function Hero() {
           transition={{ duration: 1, delay: 0.5 }}
           className="text-secondary font-sans text-lg sm:text-xl md:text-2xl lg:text-3xl font-light tracking-[0.1em] sm:tracking-[0.2em] uppercase mb-10 md:mb-12 drop-shadow-md text-balance"
         >
-          <strong><b>Manufactured</b></strong> by thousands, <strong><b>consumed</b></strong> by crores, <strong><b>processed</b></strong> by one
+          <strong><b>Consumed</b></strong> by crores, <strong><b>manufactured</b></strong> by thousands, <strong><b>processed</b></strong> by one
         </motion.p>
 
         <motion.div
@@ -46,7 +46,7 @@ export default function Hero() {
             href="#contact"
             className="inline-flex items-center justify-center bg-white text-primary hover:bg-secondary px-8 sm:px-12 py-6 sm:py-8 text-lg sm:text-xl font-bold rounded-full transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,255,255,0.3)] w-full sm:w-auto"
           >
-            Partner With Us.
+            Partner ith Us.
           </a>
         </motion.div>
       </div>

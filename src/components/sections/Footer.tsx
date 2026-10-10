@@ -28,7 +28,7 @@ export default function Footer() {
               <span className="font-heading font-bold text-xl md:text-2xl tracking-tighter">VETROX</span>
             </div>
             <p className="text-white/70 italic text-base md:text-lg">
-              "Made by thousands, used by crores, processed by one"
+              "Consumed by crores, manufactured by thousands, processed by one"
             </p>
           </div>
 

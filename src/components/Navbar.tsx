@@ -70,6 +70,7 @@ export default function Navbar() {
         <a 
           href="#contact"
           className="text-primary font-black text-[10px] md:text-xs lg:text-sm tracking-widest uppercase hover:opacity-70 transition-opacity leading-none"
+        
         >
           Contact
         </a>
