@@ -11,7 +11,7 @@ const leaders = [
     name: "Jainam Shah",
     title: "CFO",
     image: "/media/jainam-photo.webp",
-    description: "Our CFO safeguards the fiscal integrity and long-term economic strength of Vetrox. Combining financial acumen with commercial strategy, he oversees capital deployment, budget optimization, and financial planning. By balancing steady risk control with support for sustainable expansion, he ensures the company maintains strong fiscal health, lean overhead, and a strong balance sheet capable of supporting scalable venture growth."
+    description: "Driven to succeed, Our CFO makes sure every decision comes with natural aptitude for excellence. As our most reliable and responsive asset, he enforces order to a curious organisation. He would run a strict cost benefit analysis everyday to streamline the supply chain. Above all he anchors the team with deep empathy and sharp wit."
   },
   {
     name: "Yaash B",
