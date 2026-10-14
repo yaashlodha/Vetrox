@@ -5,25 +5,25 @@ const leaders = [
     name: "Chaman Chordia",
     title: "CEO",
     image: "/media/chaman-photo.webp",
-    description: "An engineer by training, a gold medalist by merit, and a visionary leader by evolution. Our CEO bridges the gap between technical brilliance and strategic foresight. With a sharp instinct for the big picture, he effortlessly transforms ambitious blueprints into reality. Grounded yet forward-thinking, he doesn't just lead the company he sets the gold standard for how we grow."
+    description: "An engineer by training and a gold medalist by academic distinction, our CEO operates at the intersection of technical precision and long-term vision. He excels at breaking down complex industrial challenges and converting ambitious targets into predictable, repeatable outcomes. Known for his high standard of execution, he focuses on building scalable frameworks, driving operational discipline, and setting a high benchmark for excellence across every tier of the company."
   },
   {
     name: "Jainam Shah",
     title: "CFO",
     image: "/media/jainam-photo.webp",
-    description: "An engineer by training, a financial strategist by evolution. Our CFO brings a rare blend of logic and imagination to the numbers game. He has an uncanny ability to decode complex processes and read the room effortlessly. Endlessly hardworking and genuinely invested in those around him, he isn’t just a CFO he’s the one who actually picks up the phone."
+    description: "Our CFO safeguards the fiscal integrity and long-term economic strength of Vetrox. Combining financial acumen with commercial strategy, he oversees capital deployment, budget optimization, and financial planning. By balancing steady risk control with support for sustainable expansion, he ensures the company maintains strong fiscal health, lean overhead, and a strong balance sheet capable of supporting scalable venture growth."
   },
   {
     name: "Yaash B",
     title: "CCO",
     image: "/media/yaash-photo.webp",
-    description: "A student of human behavior by nature, a master storyteller and strategist by evolution also an Engineer by profession. Our CCO applies data-driven logic to the art of human connection. He looks past market trends to understand the human emotions behind them. Exceptionally articulate and intensely creative, he doesn't just drive commercial success he builds lasting bridges between our brand and the world."
+    description: "Our CCO brings a fresh, analytical lens to how Vetrox connects with industry stakeholders, partners, and the market. Blending structured logic with intuitive storytelling, he distills complex environmental and commercial insights into clear, memorable narratives. He shapes the voice, identity, and market presence of the brand ensuring that every message builds genuine trust, establishes market authority, and drives meaningful engagement."
   },
   {
     name: "Siddh Shah",
     title: "COO",
     image: "/media/siddh-photo.webp",
-    description: "A master strategist by design, a master of execution by evolution. Our COO translates complex logic into seamless everyday reality. With an uncanny ability to clear operational bottlenecks, he optimizes our business without ever losing sight of the people behind it. Relentlessly efficient and always in the trenches, he ensures every promise we make is a promise delivered."
+    description: "The operational engine behind Vetrox, our COO transforms high-level strategy into seamless daily operations. With an emphasis on lean execution and systemic efficiency, he eliminates bottlenecks, refines workflow mechanics, and ensures cross-functional alignment. His hands-on leadership style fosters accountability and structure, enabling the business to scale smoothly while consistently meeting strict performance standards and timeline commitments."
   },
 ];
 

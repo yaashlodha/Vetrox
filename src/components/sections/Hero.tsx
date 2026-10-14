@@ -23,7 +23,7 @@ export default function Hero() {
           transition={{ duration: 1, ease: "easeOut" }}
           className="mb-4 md:mb-6"
         >
-          <h1 className="text-white font-heading text-6xl sm:text-8xl md:text-[10rem] lg:text-[12rem] font-black tracking-[-0.05em] leading-[0.9] drop-shadow-2xl">
+          <h1 className="text-white font-sans text-6xl sm:text-8xl md:text-[10rem] lg:text-[12rem] font-black tracking-[-0.05em] leading-[0.9] drop-shadow-2xl">
             VETROX
           </h1>
         </motion.div>
@@ -46,7 +46,7 @@ export default function Hero() {
             href="#contact"
             className="inline-flex items-center justify-center bg-white text-primary hover:bg-secondary px-8 sm:px-12 py-6 sm:py-8 text-lg sm:text-xl font-bold rounded-full transition-all hover:scale-105 active:scale-95 shadow-[0_0_30px_rgba(255,255,255,0.3)] w-full sm:w-auto"
           >
-            Partner ith Us.
+            Partner With Us.
           </a>
         </motion.div>
       </div>

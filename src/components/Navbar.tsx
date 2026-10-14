@@ -32,7 +32,7 @@ export default function Navbar() {
             e.currentTarget.src = "https://picsum.photos/seed/glass/100/100";
           }}
         />
-        <span className="text-primary font-heading font-black text-base md:text-lg lg:text-xl tracking-tighter leading-none">VETROX</span>
+        <span className="text-primary font-sans font-black text-base md:text-lg lg:text-xl tracking-tighter leading-none">VETROX</span>
       </a>
       
       
