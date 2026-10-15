@@ -11,7 +11,7 @@ const leaders = [
     name: "Jainam Shah",
     title: "CFO",
     image: "/media/jainam-photo.webp",
-    description: "Driven to succeed, Our CFO makes sure every decision comes with natural aptitude for excellence. As our most reliable and responsive asset, he enforces order to a curious organisation. He would run a strict cost benefit analysis everyday to streamline the supply chain. Above all he anchors the team with deep empathy and sharp wit."
+    description: "Driven to succeed, Our CFO makes sure every decision comes with natural aptitude for excellence. As our most reliable and responsive asset, he enforces order to a curious organisation with accountability and documentation. Endlessly Curious, he would run a strict cost benefit analysis everyday to streamline the supply chain. He has uncanny ability to be invested in people around him and above all he anchors the team with deep empathy and sharp wit.."
   },
   {
     name: "Yaash B",
@@ -58,14 +58,14 @@ export default function Leadership() {
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent opacity-0 md:group-hover:opacity-100 transition-opacity duration-500" />
               </div>
 
-              {/* Text area with fixed typo from text-centre to text-center and cleared max-w width restriction */}
-              <div className="text-center px-1 flex-grow">
-                <h3 className="text-base md:text-lg lg:text-xl font-bold text-primary leading-tight">{leader.name}</h3>
-                <p className="text-foreground/50 uppercase tracking-widest text-[9px] md:text-xs font-semibold mt-1 mb-2">{leader.title}</p>
-                <p className="text-center text-foreground/60 text-xs md:text-sm leading-relaxed">
-                  {leader.description}
-                </p>
-              </div>
+             {/* Text area with fixed typo from text-centre to text-center and cleared max-w width restriction */}
+<div className="text-center px-1 flex-grow">
+  <h3 className="text-base md:text-lg lg:text-xl font-bold text-primary leading-tight">{leader.name}</h3>
+  <p className="text-foreground/50 uppercase tracking-widest text-[9px] md:text-xs font-semibold mt-1 mb-2">{leader.title}</p>
+  <p className="text-left text-foreground/60 text-xs md:text-sm leading-relaxed">
+    {leader.description}
+  </p>
+</div>
             </motion.div>
           ))}
         </div>
