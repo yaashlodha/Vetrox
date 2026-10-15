@@ -29,7 +29,7 @@ export default function Navbar() {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       // 3. Dynamically switch background, border, and shadow using the isScrolled state
-      className={`fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-[100] w-[95%] md:w-max max-w-7xl px-4 md:px-6 lg:px-8 py-3 md:py-4 backdrop-blur-l rounded-full border flex items-center justify-between md:justify-center gap-3 md:gap-6 lg:gap-8 transition-colors duration-500 ${
+      className={`fixed top-4 md:top-6 left-1/2 -translate-x-1/2 z-[100] w-[95%] md:w-max max-w-7xl px-4 md:px-6 lg:px-8 py-1 md:py-2 backdrop-blur-l rounded-full border flex items-center justify-between md:justify-center gap-3 md:gap-6 lg:gap-8 transition-colors duration-500 ${
         isScrolled 
           ? "bg-white/90 border-primary/10 shadow-[0_20px_50px_rgba(0,0,0,0.15)]" 
           : "bg-white/20 border-white/1 shadow-none"
