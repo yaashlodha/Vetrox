@@ -5,25 +5,25 @@ const leaders = [
     name: "Chaman Chordia",
     title: "CEO",
     image: "/media/chaman-photo.webp",
-    description: "An engineer by training and a gold medalist by academic distinction, our CEO operates at the intersection of technical precision and long-term vision. He excels at breaking down complex industrial challenges and converting ambitious targets into predictable, repeatable outcomes. Known for his high standard of execution, he focuses on building scalable frameworks, driving operational discipline, and setting a high benchmark for excellence across every tier of the company."
+    description: "An award-winning engineer, Chaman bridges technical precision with big-picture vision. He excels at breaking down complex challenges into predictable, scalable results. Driven by operational discipline and high standards, he ensures Vetrox consistently executes at the highest level."
   },
   {
     name: "Jainam Shah",
     title: "CFO",
     image: "/media/jainam-photo.webp",
-    description: "Driven to succeed, Our CFO makes sure every decision comes with natural aptitude for excellence. As our most reliable and responsive asset, he enforces order to a curious organisation with accountability and documentation. Endlessly Curious, he would run a strict cost benefit analysis everyday to streamline the supply chain. He has uncanny ability to be invested in people around him and above all he anchors the team with deep empathy and sharp wit.."
+    description: "Jainam keeps Vetrox financially sharp, running daily cost-benefit analyses to optimize our workflow. The team’s most reliable sounding board, he balances strict fiscal discipline with genuine empathy and wit, bringing structure, order, and heart to our growing organization."
   },
   {
     name: "Yaash B",
     title: "CCO",
     image: "/media/yaash-photo.webp",
-    description: "Our CCO brings a fresh, analytical lens to how Vetrox connects with industry stakeholders, partners, and the market. Blending structured logic with intuitive storytelling, he distills complex environmental and commercial insights into clear, memorable narratives. He shapes the voice, identity, and market presence of the brand ensuring that every message builds genuine trust, establishes market authority, and drives meaningful engagement."
+    description: "Yaash blends analytical logic with sharp storytelling to define how Vetrox communicates. He translates complex market and environmental insights into clear, relatable stories building a trusted brand identity that connects deeply with stakeholders and establishes true market authority."
   },
   {
     name: "Siddh Shah",
     title: "COO",
     image: "/media/siddh-photo.webp",
-    description: "The operational engine behind Vetrox, our COO transforms high-level strategy into seamless daily operations. With an emphasis on lean execution and systemic efficiency, he eliminates bottlenecks, refines workflow mechanics, and ensures cross-functional alignment. His hands-on leadership style fosters accountability and structure, enabling the business to scale smoothly while consistently meeting strict performance standards and timeline commitments."
+    description: "Siddh is the operational engine turning strategy into seamless daily execution. Focused on lean efficiency and cross-functional alignment, he clears bottlenecks and builds reliable workflows so Vetrox can scale smoothly without missing deadlines or compromising quality."
   },
 ];
 
