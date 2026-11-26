@@ -164,8 +164,8 @@ export default function Solution() {
                       <div className="w-20 h-20 rounded-3xl bg-white/10 flex items-center justify-center mb-6 border border-white/30 shadow-inner group-hover:bg-white/20 transition-all duration-500">
                          <FullBottle size={36} className="text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]" />
                       </div>
-                      <div className="text-4xl md:text-5xl font-bold font-heading mb-2 tracking-tight">1 Ton</div>
-                      <div className="text-[11px] text-white/70 uppercase tracking-[0.25em] font-black opacity-80">Glass Recycled</div>
+                      <div className="text-4xl md:text-4xl font-bold font-heading mb-2 tracking-tight">1 Ton</div>
+                      <div className="text-[9px] text-white/70 uppercase tracking-[0.25em] font-black opacity-80">Glass Recycled</div>
                     </motion.div>
 
                     {/* Arrow/Connection for Desktop */}
@@ -181,8 +181,8 @@ export default function Solution() {
                       <div className="w-20 h-20 rounded-3xl bg-white/20 flex items-center justify-center mb-6 border border-white/40 shadow-inner">
                          <Thermometer size={36} className="text-secondary drop-shadow-[0_0_15px_rgba(255,255,255,0.6)]" />
                       </div>
-                      <div className="text-4xl md:text-5xl font-bold font-heading mb-2 tracking-tight">315 kg</div>
-                      <div className="text-[11px] text-white/70 uppercase tracking-[0.25em] font-black opacity-80">CO₂ Prevented</div>
+                      <div className="text-4xl md:text-4xl font-bold font-heading mb-2 tracking-tight">315 kg</div>
+                      <div className="text-[9px] text-white/70 uppercase tracking-[0.25em] font-black opacity-80">CO₂ Prevented</div>
                     </motion.div>
 
                     {/* Arrow/Connection for Desktop */}
@@ -204,8 +204,8 @@ export default function Solution() {
                            />
                          ))}
                       </div>
-                      <div className="text-4xl md:text-5xl font-bold font-heading mb-2 tracking-tight">15 Trees</div>
-                      <div className="text-[11px] text-white/70 uppercase tracking-[0.25em] font-black opacity-80">Nature Equivalent</div>
+                      <div className="text-4xl md:text-4xl font-bold font-heading mb-2 tracking-tight">15 Trees</div>
+                      <div className="text-[9px] text-white/70 uppercase tracking-[0.25em] font-black opacity-80">Nature Equivalent</div>
                     </motion.div>
 
                   </div>
